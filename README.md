@@ -18,3 +18,11 @@ This project uses computer vision to monitor safety compliance at construction s
 2. Use the custom YOLOv5 model to check if the workers are wearing PPE.
 3. Mark violations (missing helmets or vests) with colored boxes.
 4. If violations are found, save the processed video with detected violations.
+
+## Code Description
+1. **Model Loading**: Two models are loaded—one for detecting people and one custom-trained for detecting PPE (helmets, vests).
+2. **Frame Processing**: The input video is processed frame by frame. The first model detects workers, and the second model checks for safety compliance.
+3. **Violation Detection**: If a worker is missing a helmet or vest, bounding boxes are drawn on the frame (blue for no helmet, red for no vest, yellow for both missing).
+4. **Video Output**: If violations are detected, the frames are compiled into a video. If no violations are found, no video is saved.
+
+
